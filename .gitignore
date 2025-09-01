@@ -1,0 +1,21 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Node / build (jeśli używasz npm / gulp / webpack)
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+
+# OS temporary files
+*.swp
+*.tmp
+
+# Other
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
