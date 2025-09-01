@@ -1,0 +1,40 @@
+/* Reset some default font rendering */
+body {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface-alt);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  font-weight: 500;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Headings */
+.headline-h1-hero { font: var(--font-headline-h1-hero); }
+.headline-h1      { font: var(--font-headline-h1); }
+.headline-h2      { font: var(--font-headline-h2); }
+.headline-h3      { font: var(--font-headline-h3); }
+.headline-h4      { font: var(--font-headline-h4); }
+.headline-h5      { font: var(--font-headline-h5); }
+.headline-h6      { font: var(--font-headline-h6); }
+.headline-h2-hero { font: var(--font-headline-h2-hero); }
+
+/* Body text */
+.font-body-regular-xl { font: var(--font-body-regular-xl); }
+.font-body-regular-l  { font: var(--font-body-regular-l); }
+.font-body-regular-m  { font: var(--font-body-regular-m); }
+.font-body-regular-s  { font: var(--font-body-regular-s); }
+.font-body-regular-xs { font: var(--font-body-regular-xs); }
+.font-body-medium-l   { font: var(--font-body-medium-l); }
+.font-body-semibold-m { font: var(--font-body-semibold-m); }
+
