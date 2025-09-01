@@ -8,16 +8,50 @@
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
-  <header>
-    <h1 class="headline-h1-hero">Welcome</h1>
-  </header>
 
-  <main>
-    <section class="container">
-      <p class="font-body-regular-m">This is a sample content.</p>
+  <div class="site-wrapper">
+
+    <!-- Navbar -->
+    <header>
+      <button class="burger">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">O NAS</a></li>
+          <li><a href="#">NASZE INWESTYCJE</a></li>
+          <li><a href="#">PORADNIK</a></li>
+          <li><a href="#">WYNAJMIJ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Slider -->
+    <section class="slider-container">
+      <div class="slide active">Slide 1</div>
+      <div class="slide">Slide 2</div>
+      <div class="slide">Slide 3</div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
     </section>
-  </main>
+
+    <main>
+      <section class="container">
+        <h1 class="headline-h1-hero">Welcome</h1>
+        <p class="font-body-regular-m">This is a sample content.</p>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
