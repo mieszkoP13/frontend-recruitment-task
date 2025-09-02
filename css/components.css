@@ -34,12 +34,13 @@
 
 .btn-primary:hover {
   background-color: var(--color-primary-hovered);
+  color: var(--color-surface-subtle);
 }
 
 .btn-primary:active {
   background-color: var(--color-primary-clicked);
+  color: var(--color-surface-subtle);
 }
-
 
 .btn-text {
   line-height: 15px;
@@ -91,10 +92,10 @@ header {
 }
 
 .nav-left .logo img {
-  width: 101px;       /* szerokość z figmy */
-  height: 20px;       /* wysokość z figmy */
-  display: block;     /* usuwa inline spacing */
-  object-fit: contain; /* zachowuje proporcje */
+  width: 101px;       
+  height: 20px;       
+  display: block;     
+  object-fit: contain; 
 }
 
 .nav-center {
@@ -190,6 +191,112 @@ nav a:hover {
   display: block;
 }
 
+/* Section Hero */
+
+.section-hero {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px;
+  background-color: #fff;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 1038px;
+  margin-bottom: 20px;
+  color: var(--color-dark);
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 648px;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.section-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 66px;
+}
+
+/* Section Inwestycje */
+.section-inwestycje {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px 80px 40px;
+  background-color: #fff;
+}
+
+.inwestycje-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+
+.inwestycje-title {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;  
+  color: var(--color-dark);
+}
+
+.inwestycje-subtitle {
+  max-width: 750px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+
+/* Secondary buttons */
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--color-stroke);
+  background-color: var(--color-surface-light);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-stroke);
+  background-color: var(--color-surface-light);
+  color: var(--color-text-on-dark);
+}
+
+.btn-secondary:active {
+  border-color: var(--color-surface-medium);
+  background-color: var(--color-surface-light);
+  color: var(--color-surface-medium);
+}
+
+
+
 /* Hamburger */
 .burger {
   display: none;
@@ -228,7 +335,7 @@ nav a:hover {
   .btn-nav {
     display: none;
   }
-  
+
   .nav-right {
     display: flex;
     flex-direction: column;
