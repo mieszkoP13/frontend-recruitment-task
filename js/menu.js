@@ -1,6 +1,5 @@
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('nav');
-const submenuParents = document.querySelectorAll('.has-submenu');
+const nav = document.querySelector('header nav'); // upewniamy się że bierzemy nav z headera
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
@@ -13,7 +12,6 @@ mediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     burger.classList.remove('active');
     nav.classList.remove('active');
-    submenuParents.forEach((parent) => parent.classList.remove('open'));
   }
 });
 

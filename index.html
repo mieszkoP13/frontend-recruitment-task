@@ -17,33 +17,51 @@
 
     <!-- Navbar -->
     <header>
-      <button class="burger">
-        <span class="bar top"></span>
-        <span class="bar middle"></span>
-        <span class="bar bottom"></span>
-      </button>
-      <nav>
-        <ul>
-          <li><a href="#">HOME</a></li>
-          <li class="has-submenu">
-            <a href="#">O NAS</a>
-            <ul class="submenu">
-              <li><a href="#">Kim jesteśmy</a></li>
-              <li><a href="#">Nasz zespół</a></li>
-              <li><a href="#">Historia firmy</a></li>
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="#" class="logo">
+            <img src="assests/images/logo.svg" alt="Logo">
+          </a>
+        </div>
+
+        <div class="nav-center">
+          <nav>
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li class="has-submenu">
+                <a href="#">O NAS <span class="arrow"></span></a>
+                <ul class="submenu">
+                  <li><a href="#">Kim jesteśmy</a></li>
+                  <li><a href="#">Nasz zespół</a></li>
+                  <li><a href="#">Historia firmy</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a href="#">NASZE INWESTYCJE <span class="arrow"></span></a>
+                <ul class="submenu">
+                  <li><a href="#">Aktualne projekty</a></li>
+                  <li><a href="#">Zrealizowane projekty</a></li>
+                </ul>
+              </li>
+              <li><a href="#">PORADNIK</a></li>
+              <li><a href="#">WYNAJMIJ</a></li>
             </ul>
-          </li>
-          <li class="has-submenu">
-            <a href="#">NASZE INWESTYCJE</a>
-            <ul class="submenu">
-              <li><a href="#">Aktualne projekty</a></li>
-              <li><a href="#">Zrealizowane projekty</a></li>
-            </ul>
-          </li>
-          <li><a href="#">PORADNIK</a></li>
-          <li><a href="#">WYNAJMIJ</a></li>
-        </ul>
-      </nav>
+          </nav>
+        </div>
+
+        <div class="nav-right">
+          <button class="btn-primary btn-nav">
+            <span class="btn-text">KONTAKT</span>
+            <img src="assests/images/arrow.svg" alt="" class="btn-icon" />
+          </button>
+          <button class="burger">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+          </button>
+        </div>
+
+      </div>
     </header>
 
     <!-- Slider -->
