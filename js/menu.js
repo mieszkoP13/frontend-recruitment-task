@@ -1,5 +1,6 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav');
+const submenuParents = document.querySelectorAll('.has-submenu');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
@@ -12,5 +13,16 @@ mediaQuery.addEventListener('change', (e) => {
   if (e.matches) {
     burger.classList.remove('active');
     nav.classList.remove('active');
+    submenuParents.forEach((parent) => parent.classList.remove('open'));
   }
+});
+
+// Toggle submenus on mobile
+submenuParents.forEach((parent) => {
+  parent.addEventListener('click', (e) => {
+    if (window.innerWidth < 768) {
+      e.preventDefault();
+      parent.classList.toggle('open');
+    }
+  });
 });

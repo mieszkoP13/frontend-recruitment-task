@@ -16,6 +16,7 @@ header {
   height: 82px;
   background-color: var(--color-white);
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -36,6 +37,40 @@ nav a:hover {
   color: var(--color-primary);
 }
 
+/* Submenu (desktop) */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1002;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  background: var(--color-surface-subtle);
+  color: var(--color-primary);
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
 /* Hamburger */
 .burger {
   display: none;
@@ -45,7 +80,7 @@ nav a:hover {
   width: 40px;
   height: 30px;
   position: relative;
-  z-index: 1001;
+  z-index: 1003;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -72,7 +107,9 @@ nav a:hover {
 
 /* Mobile menu */
 @media (max-width: 767px) {
-  .burger { display: flex; flex-direction: column; justify-content: space-between; }
+  .burger {
+    display: flex;
+  }
 
   nav {
     position: fixed;
@@ -91,13 +128,31 @@ nav a:hover {
     padding-right: 1rem;
   }
 
-  nav.active { right: 0; }
+  nav.active {
+    right: 0;
+  }
 
   nav ul {
     flex-direction: column;
-    display: flex;
-    gap: 2rem;
-    padding-left: 0;
+    gap: 1rem;
+  }
+
+  /* Submenu (mobile) */
+  .submenu {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding-left: 1rem;
+  }
+
+  .has-submenu > a::after {
+    content: "▼";
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .has-submenu.open .submenu {
+    display: block;
   }
 }
 
@@ -124,7 +179,9 @@ nav a:hover {
   line-height: 300px;
 }
 
-.slide.active { display: flex; }
+.slide.active {
+  display: flex;
+}
 
 .slider-container .prev,
 .slider-container .next {
