@@ -1,7 +1,7 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
+const next = document.querySelector('.slider-next');
+const prev = document.querySelector('.slider-prev');
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
