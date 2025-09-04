@@ -1,22 +1,49 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('.slider-next');
-const prev = document.querySelector('.slider-prev');
+const track = document.querySelector('.slider-track');
+const slides = Array.from(document.querySelectorAll('.slider-track .slide'));
+const prevBtn = document.querySelector('.slider-prev');
+const nextBtn = document.querySelector('.slider-next');
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
+let currentIndex = 1;
+const slideCount = slides.length;
+const viewport = document.querySelector('.column-right');
+
+function getSlideWidth() {
+  return viewport.clientWidth;
 }
 
-next.addEventListener('click', () => {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
+function updateTrack(animate = true) {
+  if (!animate) {
+    track.style.transition = 'none';
+  } else {
+    track.style.transition = 'transform 0.5s ease-in-out';
+  }
+  track.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex >= slideCount - 1) return;
+  currentIndex++;
+  updateTrack();
 });
 
-prev.addEventListener('click', () => {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  showSlide(currentSlide);
+prevBtn.addEventListener('click', () => {
+  if (currentIndex <= 0) return;
+  currentIndex--;
+  updateTrack();
 });
 
-showSlide(currentSlide);
+track.addEventListener('transitionend', () => {
+  // jump to the first
+  if (currentIndex === slideCount - 1) {
+    currentIndex = 1;
+    updateTrack(false);
+  }
+  // jump to the last
+  if (currentIndex === 0) {
+    currentIndex = slideCount - 2;
+    updateTrack(false);
+  }
+});
+
+window.addEventListener('resize', () => updateTrack(false));
+updateTrack(false);
