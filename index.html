@@ -177,10 +177,91 @@
       </div>
     </section>
 
+    <section class="section-poradniki">
+      <div class="poradniki-container">
+        <button class="btn-primary">
+          WIĘCEJ PORADNIKÓW
+          <img src="assests/images/arrow.svg" alt="" class="btn-icon" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-contact">
+      <div class="contact-container">
+
+        <div class="box-top">
+          <h2>POROZMAWIAJMY</h2>
+        </div>
+
+        <div class="box-bottom">
+          <div class="contact-heading">
+            <h3>ZOSTAW NAM WIADOMOŚĆ</h3>
+          </div>
+
+          <div class="contact-form">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-item">
+                  <label for="email">ADRES E-MAIL</label>
+                  <input type="email" id="email" name="email" class="input" placeholder="Twój adres E-mail" required />
+                  <p class="error-txt display-none">Podaj poprawny adres e-mail</p>
+                </div>
+
+                <div class="form-item">
+                  <label for="name">IMIĘ I NAZWISKO</label>
+                  <input type="text" id="name" name="name" class="input" placeholder="Twoje imię i nazwisko" required />
+                  <p class="error-txt display-none">To pole jest wymagane</p>
+                </div>
+
+                <div class="form-item">
+                  <label for="subject">TEMAT ROZMOWY</label>
+                  <input type="text" id="subject" name="subject" class="input" placeholder="O czym chcesz porozmawiać?" required />
+                  <p class="error-txt display-none">To pole jest wymagane</p>
+                </div>
+              </div>
+
+              <div class="form-item">
+                <label for="message">WIADOMOŚĆ</label>
+                <textarea id="message" name="message" class="input textarea" placeholder="Napisz swoją wiadomość..." required></textarea>
+                <p class="error-txt display-none">Wiadomość nie może być pusta</p>
+              </div>
+
+              <div class="form-item checkbox-item">
+                <label>
+                  <input type="checkbox" id="consent" name="consent" required />
+                  Wyrażam zgodę na przetwarzanie moich danych osobowych w postaci imienia, nazwiska, adresu e-mail i nr tel.
+                  (jeżeli został podany), podanych w powyższym formularzu, zgodnie z przepisami rozporządzenia Parlamentu
+                  Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku
+                  z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy
+                  95/46/WE (ogólne rozporządzenie o ochronie danych), Dz. Urz. UE z 4.5.2016 r. L 119, str. 1), w celu
+                  udzielenia odpowiedzi na złożone zapytanie. Żądanie usunięcia danych proszę kierować na adres
+                  biuro@realestate.com<br><br>
+
+                  Informujemy, że: 1. Administratorem Pani/Pana danych osobowych jest RealEstate sp. z o.o. z siedzibą 
+                  w Poznaniu przy ul. Długiej 5 lok. 25, 01-200 Poznań (KRS nr 0001000000) (dalej „Administrator”) e-mail: biuro@realestate.com<br><br>
+                </label>
+                <p class="error-txt display-none">Musisz wyrazić zgodę</p>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-button">
+            <button class="btn-primary">
+              WYŚLIJ WIADOMOŚĆ
+              <img src="assests/images/arrow.svg" alt="" class="btn-icon" />
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     </main>
   </div>
 
   <script src="js/menu.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
 </html>
