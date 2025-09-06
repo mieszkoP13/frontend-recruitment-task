@@ -1,5 +1,6 @@
 const burger = document.querySelector('.burger');
-const nav = document.querySelector('header nav'); // upewniamy się że bierzemy nav z headera
+const nav = document.querySelector('header nav');
+const submenuParents = document.querySelectorAll('.has-submenu');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');

@@ -154,12 +154,13 @@ nav a:hover {
 
 .has-submenu .arrow {
   display: inline-block;
-  width: 0;
-  height: 0;
-  margin-top: 2px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid var(--color-dark);
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  transform: rotate(-45deg);
+  margin-left: 4px;
+  margin-bottom: 3px;
 }
 
 .submenu {
@@ -357,6 +358,12 @@ nav a:hover {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+@media (max-width: 1000px) {
+  .btn-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .btn-nav {
     display: none;
@@ -372,15 +379,35 @@ nav a:hover {
 
   .burger {
     display: flex;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translateY(-50%);
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transform: none;
     z-index: 1005;
     flex-direction: column;
     justify-content: space-between;
     width: 40px;
     height: 30px;
+  }
+
+  .burger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .burger.active .top {
+    transform: rotate(45deg) translate(14px, 14px);
+  }
+
+  .burger.active .middle {
+    opacity: 0;
+  }
+
+  .burger.active .bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .nav-center {
