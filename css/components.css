@@ -232,6 +232,60 @@ nav a:hover {
   height: 66px;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .section-hero {
+    padding: 60px 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    max-width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .section-inner {
+    gap: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-hero {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero-container {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .section-inner {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .section-inner button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 /* Section Inwestycje */
 .section-inwestycje {
   width: 100%;
@@ -291,6 +345,67 @@ nav a:hover {
   color: var(--color-dark);
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .section-inwestycje {
+    padding: 0 20px 60px 20px;
+  }
+
+  .inwestycje-title {
+    font-size: 38px;
+  }
+
+  .inwestycje-subtitle {
+    font-size: 16px;
+    max-width: 600px;
+  }
+
+  .section-badge {
+    padding: 60px 20px;
+  }
+
+  .badge-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge-title {
+    font-size: 38px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-inwestycje {
+    padding: 0 16px 40px 16px;
+  }
+
+  .inwestycje-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .inwestycje-subtitle {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .section-badge {
+    padding: 40px 16px;
+    text-align: center;
+  }
+
+  .badge-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
 
 /* Secondary buttons */
 
@@ -308,7 +423,7 @@ nav a:hover {
   background-color: var(--color-surface-light);
   color: var(--color-dark);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; /* transition only for hover */
 }
 
 .btn-secondary:hover {
@@ -327,6 +442,36 @@ nav a:hover {
   height: 46px;
   border-radius: 999px;
   padding: 13px 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 14px 24px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .btn-primary .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 20px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .btn-primary .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* Hamburger */
@@ -369,7 +514,8 @@ nav a:hover {
   }
 }
 
-@media (max-width: 767px) {
+/* Mobile */
+@media (max-width: 768px) {
   .btn-nav {
     display: none;
   }
@@ -692,12 +838,14 @@ nav a:hover {
   margin-top: auto;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .articles-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .section-articles {
     padding: 0 20px 40px 20px;
@@ -798,6 +946,7 @@ nav a:hover {
   justify-content: flex-start;
 }
 
+/* Tablet */
 @media (max-width: 1024px) {
   .section-contact {
     padding: 60px;
@@ -812,6 +961,7 @@ nav a:hover {
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .section-contact {
     padding: 40px 20px;
@@ -956,6 +1106,7 @@ input[type="checkbox"]:checked::after {
   accent-color: var(--color-primary);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .form-row {
     flex-direction: column;
@@ -1000,6 +1151,7 @@ input[type="checkbox"]:checked::after {
   max-width: 900px;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .section-footer {
     padding: 20px 20px 40px 20px;
