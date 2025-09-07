@@ -11,14 +11,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 2.5px;
-  padding: 15.5px 20px;
-  height: 46px;
+  gap: 10px;
+  padding: 18px 32px;
+  height: 56px;
   font: var(--font-body-regular-m);
   color: var(--color-white);
   background-color: var(--color-primary);
   border: none;
-  border-radius: 23px; /* 46/2 */
+  border-radius: 999px;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
@@ -298,8 +298,9 @@ nav a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  padding: 0 20px;
+  gap: 10px;
+  padding: 18px 32px;
+  height: 56px;
   font-size: 15px;
   font-weight: 600;
   border-radius: 999px;
@@ -322,7 +323,11 @@ nav a:hover {
   color: var(--color-surface-medium);
 }
 
-
+.btn-nav {
+  height: 46px;
+  border-radius: 999px;
+  padding: 13px 20px;
+}
 
 /* Hamburger */
 .burger {
@@ -477,7 +482,7 @@ nav a:hover {
 .column-left {
   width: 515px;
   height: 540px;
-  padding: 36px;
+  padding: 52px 36px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -510,6 +515,7 @@ nav a:hover {
 .slider-inner {
   display: flex;
   align-items: center;
+  padding-top: 32px;
 }
 
 .slider-nav {
@@ -534,7 +540,7 @@ nav a:hover {
 .column-right {
   position: relative;
   width: 738px;
-  height: 540px;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 14px;
 }
@@ -556,7 +562,77 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+@media (max-width: 1400px) {
+  .slider-inner {
+    padding-top: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .column-right {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .container-slider {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .column-left {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+  }
+
+  .slider-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .column-right {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+  }
+
+  .section-slider {
+    padding: 0 20px;
+  }
+
+  .container-slider {
+    gap: 16px;
+    border-radius: 10px;
+  }
+
+  .column-left {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .slider-heading h2 {
+    font-size: 20px;
+  }
+
+  .slider-paragraph p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .slider-nav {
+    margin-top: 16px;
+    justify-content: center;
+  }
 }
 
 /* Section Articles */
